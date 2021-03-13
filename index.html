@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Customers</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <h1 class="header_title">Customers</h1>
+    </div>
+  <div class="sidebar">
+    <nav>
+        <ul class="list-group">
+          <li class="list-group-header">
+            <a href="./index.html" rel="noopener noreferrer">Dashboard</a>
+          </li>
+            <li class="list-group-header">
+              <a href="./retailer.html" rel="noopener noreferrer">Retailers</a>
+            </li>
+
+            <li class="list-group-item">
+              <a href="./customers.html"  rel="noopener noreferrer">weather</a>
+            </li>
+
+            <li class="list-group-item">
+              <a href="./player.html" rel="noopener noreferrer">Music Player</a>
+            </li>
+            
+          </ul>
+    </nav>
+</div> <!--end sidebar-->
+<div class="content">
+  <div class="top-items">
+    <div class="search">
+      <!-- <label for="serch">Search</label> -->
+      <input type="text" class="search" id="myInput" placeholder="Search for names.."
+        onkeyup="myFunction()" title="Type in a name">
+    </div>
+    <!-- <div class="count">Total Customers: <small class="badget">1440</small></div> -->
+    <button class="btn btn-add">Add Customer</button>
+</div>
+  <div class="container">
+    <div class="table-wrapper">
+      <!-- <div id="portexe-search-root"></div> -->
+      <table class="table-users"  id="myTable">
+          <tr>
+            <th>Ref.: </th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>DOB</th>
+            <th>Actions</th>
+          </tr>
+      </table >
+
+      <!-- ===Add Modal=== -->
+      <div class="add-modal modal-wrapper">
+        <div class="modal">
+          <div class="modal-header"><h3>Add Customer</h3></div>
+          <div class="modal-body">
+
+            <form class="form" id="form" autocomplete="off">  
+
+              <div class="form-control">
+                <label >Name:</label>
+                <input type="text" id="fname" placeholder="required">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+              </div>
+              
+              <div class="form-control">
+                <label >Last Name:</label>
+                <input type="text" id="lname" placeholder="required">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+              </div>
+              
+              <div class="form-control">
+                <label >Phone:</label>
+                <input type="number"  id="phono" placeholder="required">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+              </div>
+              
+              <div class="form-control">
+                <label >Email:</label>
+                <input type="email" id="email" placeholder="optional">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+              </div>
+              
+              <div class="form-control">
+                <label >Date of Birth:</label>
+                <input type="text"  id="DOB" placeholder="optional">
+              </div>
+
+              <button class="btn btn-modal">Save Customer</button>
+            </form>
+          </div> <!--End modal body-->
+        </div>
+      </div> <!--End of Add modal-->
+
+
+       <!-- Edit Modal -->
+       <div class="edit-modal modal-wrapper">
+        <div class="modal">
+          <div class="modal-header"><h3>Edit Customer</h3></div>
+          <div class="modal-body">
+            
+            <form class="form" id="form" autocomplete="off">
+              
+              <div class="form-control">
+                <label >Name:</label>
+                <input type="text"  id="fname" placeholder="required">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+              </div>
+              
+              <div class="form-control">
+                <label >Last Name:</label>
+                <input type="text"  id="lname" placeholder="required">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+              </div>
+              
+              <div class="form-control">
+                <label >Phone:</label>
+                <input type="number" id="phono" placeholder="required">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+              </div>
+              
+              <div class="form-control">
+                <label >Email:</label>
+                <input type="email" id="email" placeholder="optional">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+              </div>
+              
+              <div class="form-control">
+                <label >Date of Birth:</label>
+                <input type="text"  id="DOB" placeholder="optional">
+              </div>
+
+              <button class="btn btn-modal">Update Customer</button>
+            </form>
+          </div> <!--End modal body-->
+        </div>
+      </div>
+
+
+    </div><!-- End table wrapper -->
+  </div><!-- End container -->
+</div> <!-- End of main content -->
+</div>
+
+ <footer class="footer">
+  <h4 class="footer_text">Designed and Developed by: Mario Ibarra</h4>
+  <p>Copyright &copy; 2021</p>
+ </footer>
+ <script src="./index.js"></script>
+ <script src="./search.js"></script>
+</body>
+</html>
+
